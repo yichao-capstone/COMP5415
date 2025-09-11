@@ -1,5 +1,9 @@
 '''Comparison between Streamlit and HTML/CSS/JS'''
 import streamlit as st
+from pathlib import Path
+import streamlit.components.v1 as components
+css_text = Path('assets/ex.css').read_text()
+html_body = '''<div id='ex'><span>Hello World!</span></div>'''
 tab1, tab2 = st.tabs(["Example1", "Example2"])
 with tab2:
     col1, col2 = st.columns(2,border=True)
@@ -8,26 +12,28 @@ with tab2:
         with st.echo():
             st.markdown('''# :rainbow[Hello World!]''')
     with col2:
-            css_rainbow = '''<span style="
-                background: linear-gradient(to right, 
-                    red, orange, yellow, green, blue, indigo, violet);
-                -webkit-background-clip: text;
-                color: transparent;
-                font-size: 3em;
-                font-weight: bold;">
-                Hello World!
-                </span>'''
-            st.title("HTML with CSS")
-            st.code(css_rainbow, line_numbers=True)
-            st.markdown(css_rainbow,
-                    unsafe_allow_html=True)
+        css_rainbow = f'''<!doctype html>
+            <html lang="en">
+            <head>
+            <style>{css_text}</style>
+            <meta charset="utf-8">
+            <title>Hello World</title>
+            </head>
+            <body>
+            {html_body}
+            </body>
+            </html>'''
+        st.title("HTML with CSS")
+        st.code(css_rainbow, line_numbers=True)
+        components.html(css_rainbow, height=100)
+        
 with tab1:
     col1, col2 = st.columns(2,border=True)
     with col1:
         with st.echo():
             st.title('Hello World!')
     with col2:
-         html_hello = """
+        html_hello = """
             <!doctype html>
             <html lang="en">
             <head>
@@ -39,5 +45,5 @@ with tab1:
             </body>
             </html>
             """
-         st.code(html_hello, line_numbers=True)
-         st.markdown(html_hello, unsafe_allow_html=True)
+        st.code(html_hello, line_numbers=True)
+        st.markdown(html_hello, unsafe_allow_html=True)
