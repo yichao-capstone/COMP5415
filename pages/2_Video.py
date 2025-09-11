@@ -5,7 +5,8 @@ import base64
 
 st.set_page_config(page_title="Video", page_icon="🎞️", layout="wide")
 with st.container(width=800,border=False):
-    st.video("assets/star.mp4", loop=True,subtitles="assets/sub.vtt")
+    with st.echo():
+        st.video("assets/star.mp4", loop=True,subtitles="assets/sub.vtt")
 with st.container(width=800,border=False):
     st.code('''
 WEBVTT

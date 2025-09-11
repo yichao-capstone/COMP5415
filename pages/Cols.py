@@ -2,7 +2,7 @@ import streamlit as st
 st.title("Layout")
 st.write('Streamlit provides several options for controlling how different elements are laid out on the screen.')
 st.code('''
-col1,col2,col3=st.columns([1,2,3],border=True,gap='small')
+col1,col2,col3=st.columns([1,2,3],border=True,gap='small') #[1,2,3] means col2 is twice wider than col1...
 with col1:
     st.write('column1')
 with col2:
