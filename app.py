@@ -13,7 +13,7 @@ st.set_page_config(
 )
 
 with st.sidebar:
-    st.code('''st.image('assets/logo.png')''')
+    #st.code('''st.image('assets/logo.png')''')
     st.image('assets/logo.png')
 
 pages = {
@@ -42,7 +42,5 @@ pages = {
 }
 
 po = st.sidebar.selectbox("Navigation Bar", ["top", "sidebar", "hidden"], key="NP")
-
 pg = st.navigation(pages, position=po)
 pg.run()
-
