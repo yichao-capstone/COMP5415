@@ -39,6 +39,9 @@ pages = {
         st.Page("pages/2_Video.py", title="Animation"),
         st.Page("pages/Chapter.py", title="Video Chapter"),
     ],
+    "Streamlit VS HTML/CSS/JS": [
+        st.Page("pages/compare_style.py", title="Showcase"),
+    ],
 }
 
 po = st.sidebar.selectbox("Navigation Bar", ["top", "sidebar", "hidden"], key="NP")
