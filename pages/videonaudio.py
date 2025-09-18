@@ -111,10 +111,7 @@ st.download_button("⬇️ Download This Frame", data=img.tobytes(), file_name=f
 
 st.title("🎥 How to Set Up a Green Screen Studio")
 st.markdown("Welcome to your beginner-friendly guide on creating a professional green screen setup at home or in the studio!")
-from pydub import AudioSegment
-from pydub.playback import play
-import numpy as np
-import io
+
 st.header("🧰 What You'll Need")
 st.markdown("""
 To build a green screen studio, you'll need the following equipment:
