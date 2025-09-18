@@ -6,7 +6,7 @@ from PIL import Image
 import time
 
 st.set_page_config(page_title="🎥 Digital Video Introduction", layout="wide")
-st.title("🎥 Introduction to Digital Video (No OpenCV)")
+st.title("🎥 Introduction to Digital Video")
 
 # ------------------------
 # Sidebar Controls
