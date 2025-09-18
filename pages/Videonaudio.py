@@ -16,7 +16,7 @@ frame_rate = st.sidebar.slider("Frame Rate (FPS)", 1, 60, 10)
 duration = st.sidebar.slider("Duration (Seconds)", 1, 10, 3)
 resolution = st.sidebar.selectbox("Resolution", ["64x64", "128x128", "256x256"], index=1)
 color_mode = st.sidebar.selectbox("Color Mode", ["RGB", "Grayscale"])
-
+###
 # ------------------------
 # Config
 # ------------------------
