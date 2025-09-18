@@ -45,6 +45,10 @@ pages = {
     "Streamlit VS HTML/CSS/JS": [
         st.Page("pages/compare_style.py", title="Showcase"),
     ],
+    "Questions": [
+        st.Page("pages/discussion.py", title="Discussion"),
+    ],
+
     
 }
 

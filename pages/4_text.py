@@ -1,6 +1,5 @@
 import streamlit as st
 
-st.set_page_config(page_title="Streamlit Text Elements Showcase", layout="centered")
 
 st.title("Streamlit Text Elements Showcase")
 tabs = st.tabs([
